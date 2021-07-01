@@ -5,6 +5,8 @@ interface Props {
    item: IDateInfoObj;
 }
 
-export default function DaysUntilItem({ item }: Props) {
+const DaysUntilItem: React.FC<Props> = ({ item }) => {
    return <div>{item}</div>;
-}
+};
+
+export default DaysUntilItem;
