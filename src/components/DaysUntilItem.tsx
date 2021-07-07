@@ -1,8 +1,7 @@
 import React from 'react';
-import { IDateInfoObj } from '../interfaces';
 
 interface Props {
-   item: IDateInfoObj;
+   item: string;
 }
 
 const DaysUntilItem: React.FC<Props> = ({ item }) => {

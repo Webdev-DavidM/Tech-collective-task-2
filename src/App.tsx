@@ -1,12 +1,11 @@
 import React, { FC, useState, useEffect } from 'react';
 import './App.css';
 import DaysUntilItem from './components/DaysUntilItem';
-import { IDateInfoObj } from './interfaces';
 import { data } from './data';
 import { formatData } from './helpers/formatData';
 
 const App: FC = () => {
-   const [daysData, setDaysDates] = useState<IDateInfoObj[]>([]);
+   const [daysData, setDaysDates] = useState<string[]>([]);
    const [showDates, setShowDates] = useState<boolean>(false);
 
    useEffect(() => {
@@ -22,7 +21,7 @@ const App: FC = () => {
       <div className='App'>
          <button onClick={showDatesInfo}>Show Dates</button>
          {showDates &&
-            daysData.map((item: IDateInfoObj, index: number) => {
+            daysData.map((item: string, index: number) => {
                return <DaysUntilItem item={item} key={index} />;
             })}
       </div>
